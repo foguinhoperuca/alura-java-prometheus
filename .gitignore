@@ -28,3 +28,4 @@ replay_pid*
 *~*
 *.swp
 *.swo
+prometheus_data

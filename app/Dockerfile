@@ -1,4 +1,5 @@
-FROM openjdk:8-jdk-alpine
+# FROM openjdk:8-jdk-alpine
+FROM eclipse-temurin:8-jdk-alpine
 
 RUN addgroup -S spring && adduser -S spring -G spring
 
