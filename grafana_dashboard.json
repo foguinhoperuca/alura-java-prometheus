@@ -342,7 +342,22 @@
                 "id": "color",
                 "value": {
                   "fixedColor": "dark-red",
-                  "mode": "thresholds"
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "warn"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-yellow",
+                  "mode": "fixed"
                 }
               }
             ]
@@ -380,7 +395,7 @@
           "editorMode": "code",
           "exemplar": false,
           "expr": "sum(increase(logback_events_total{application=\"$application\", instance=\"$instance\", job=\"app-forum-api\", level=\"warn\"}[5m]))",
-          "legendFormat": "{{level}}",
+          "legendFormat": "warn",
           "range": true,
           "refId": "A",
           "datasource": {
@@ -398,7 +413,7 @@
           "expr": "sum(increase(logback_events_total{application=\"$application\", instance=\"$instance\", job=\"app-forum-api\", level=\"error\"}[5m]))",
           "hide": false,
           "instant": false,
-          "legendFormat": "{{level}}",
+          "legendFormat": "error",
           "range": true,
           "refId": "B"
         }
@@ -470,7 +485,7 @@
   "timezone": "browser",
   "title": "dash-forum-api",
   "uid": "ad9jtpz",
-  "version": 4,
+  "version": 5,
   "weekStart": "",
   "id": null
 }
