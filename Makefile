@@ -11,6 +11,11 @@ build:
 	@date
 	@mvn clean package
 
+stop-service:
+	@sudo service mysql stop
+	@sudo service redis-server stop
+	@sudo service nginx stop
+
 fix-docker:
 	@sudo dmesg | grep -i apparmor | grep -i docker
 	@sudo apt-get install apparmor-utils -y
